@@ -1,13 +1,11 @@
 dist: trusty
-sudo: false
 language: python
 python:
-- "2.6"
 - "2.7"
-env:
-- PYTHON_DJVULIBRE_VERSION=0.3.9 CYTHON_VERSION=0.22.1
-- PYTHON_DJVULIBRE_VERSION= SUBPROCESS32=y
-- PYTHON_DJVULIBRE_VERSION=
+#env:
+#- PYTHON_DJVULIBRE_VERSION=0.3.9 CYTHON_VERSION=0.22.1
+#- PYTHON_DJVULIBRE_VERSION= SUBPROCESS32=y
+#- PYTHON_DJVULIBRE_VERSION=
 addons:
   apt:
     packages:
@@ -16,6 +14,11 @@ addons:
     - libdjvulibre-dev
     - libxml2-utils
 cache: pip
+before_install:
+# add for profile
+- sudo add-apt-repository -y ppa:ubuntu-toolchain-r/test
+- sudo apt-get update -qq
+
 install:
 - pip install --upgrade pip
 - pip install --verbose cython${CYTHON_VERSION:+==$CYTHON_VERSION}
@@ -31,11 +34,20 @@ install:
 - pip install --verbose pillow${PILLOW_VERSION:+==$PILLOW_VERSION}
 - pip install pydiatra pyflakes
 - pip install docutils
+# add for profile
+- sudo apt-get install -qq g++-4.8
+- export CXX="g++-4.8"
+- pip install nose-cprof
+- pip install properform
+
+
 script:
-- nosetests --verbose
+- nosetests --verbose --with-cprofile --cprofile-stats-erase --cprofile-stats-file=profile_ocrodjvu_791192697c_0
+- python -m properform Push 47.88.50.110:15554 asdf_ocrodjvu_791192697c_0 ./profile_ocrodjvu_791192697c_0
 - private/run-pydiatra
 - private/run-pyflakes
 - private/check-rst
 - xmllint --nonet --noout --valid doc/*.xml
 
 # vim:ts=2 sts=2 sw=2 et
+#2017-07-29 13:55:08 modified at 0
