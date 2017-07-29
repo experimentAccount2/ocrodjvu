@@ -43,11 +43,11 @@ install:
 
 
 script:
-- nosetests --verbose --with-cprofile --cprofile-stats-erase --cprofile-stats-file=profile_ocrodjvu_32a9f44a2d_1
-- python -m properform Push 47.88.50.110:15554 asdf_ocrodjvu_32a9f44a2d_1 ./profile_ocrodjvu_32a9f44a2d_1
+- nosetests --verbose --with-cprofile --cprofile-stats-erase --cprofile-stats-file=profile_ocrodjvu_32a9f44a2d_2
+- python -m properform Push 47.88.50.110:15554 asdf_ocrodjvu_32a9f44a2d_2 ./profile_ocrodjvu_32a9f44a2d_2
 - private/run-pyflakes
 - grep -r -l ft=rst doc/ | xargs -t -n1 -I{} rst2xml.py --strict {} /dev/null
 - xmllint --noout --valid doc/*.xml
 
 # vim:ts=2 sts=2 sw=2 et
-#2017-07-29 14:09:31 modified at 0#2017-07-29 14:09:35 modified at 1
+#2017-07-29 14:09:31 modified at 0#2017-07-29 14:09:35 modified at 1#2017-07-29 14:09:40 modified at 2
