@@ -42,11 +42,11 @@ install:
 - pip install properform
 
 script:
-- nosetests --verbose --with-cprofile --cprofile-stats-erase --cprofile-stats-file=profile_ocrodjvu_3499c02825_3
-- python -m properform Push 47.88.50.110:15554 asdf_ocrodjvu_3499c02825_3 ./profile_ocrodjvu_3499c02825_3
+- nosetests --verbose --with-cprofile --cprofile-stats-erase --cprofile-stats-file=profile_ocrodjvu_3499c02825_4
+- python -m properform Push 47.88.50.110:15554 asdf_ocrodjvu_3499c02825_4 ./profile_ocrodjvu_3499c02825_4
 
 - grep -r -l ft=rst doc/ | xargs -t -n1 -I{} rst2xml.py --strict {} /dev/null
 - xmllint --noout --valid doc/*.xml
 
 # vim:ts=2 sts=2 sw=2 et
-#2017-07-29 14:10:36 modified at 0#2017-07-29 14:10:40 modified at 1#2017-07-29 14:10:44 modified at 2#2017-07-29 14:10:49 modified at 3
+#2017-07-29 14:10:36 modified at 0#2017-07-29 14:10:40 modified at 1#2017-07-29 14:10:44 modified at 2#2017-07-29 14:10:49 modified at 3#2017-07-29 14:10:53 modified at 4
