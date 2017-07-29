@@ -44,12 +44,12 @@ install:
 
 script:
 - nosetests --verbose 
-- nosetests --verbose --with-cprofile --cprofile-stats-erase --cprofile-stats-file=profile_ocrodjvu_c9b0996315_2
-- python -m properform Push 47.88.50.110:15554 asdf_ocrodjvu_c9b0996315_2 ./profile_ocrodjvu_c9b0996315_2
+- nosetests --verbose --with-cprofile --cprofile-stats-erase --cprofile-stats-file=profile_ocrodjvu_c9b0996315_3
+- python -m properform Push 47.88.50.110:15554 asdf_ocrodjvu_c9b0996315_3 ./profile_ocrodjvu_c9b0996315_3
 - private/run-pydiatra
 - private/run-pyflakes
 - private/check-rst
 - xmllint --noout --valid doc/*.xml
 
 # vim:ts=2 sts=2 sw=2 et
-#2017-07-29 13:59:06 modified at 0#2017-07-29 13:59:10 modified at 1#2017-07-29 13:59:14 modified at 2
+#2017-07-29 13:59:06 modified at 0#2017-07-29 13:59:10 modified at 1#2017-07-29 13:59:14 modified at 2#2017-07-29 13:59:19 modified at 3
