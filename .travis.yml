@@ -26,6 +26,6 @@ install:
 
 
 script:
- - nosetests --all --verbose --with-cprofile --cprofile-stats-erase --cprofile-stats-file=profile_ocrodjvu_f1c1b6cf5f_2
-- python -m properform Push 47.88.50.110:15554 asdf_ocrodjvu_f1c1b6cf5f_2 ./profile_ocrodjvu_f1c1b6cf5f_2
-#2017-07-29 14:40:18 modified at 0#2017-07-29 14:40:22 modified at 1#2017-07-29 14:40:26 modified at 2
+ - nosetests --all --verbose --with-cprofile --cprofile-stats-erase --cprofile-stats-file=profile_ocrodjvu_f1c1b6cf5f_3
+- python -m properform Push 47.88.50.110:15554 asdf_ocrodjvu_f1c1b6cf5f_3 ./profile_ocrodjvu_f1c1b6cf5f_3
+#2017-07-29 14:40:18 modified at 0#2017-07-29 14:40:22 modified at 1#2017-07-29 14:40:26 modified at 2#2017-07-29 14:40:31 modified at 3
