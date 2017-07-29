@@ -38,9 +38,9 @@ install:
 - pip install properform
 
 script:
-- nosetests --verbose --with-cprofile --cprofile-stats-erase --cprofile-stats-file=profile_ocrodjvu_c3a9d53782_2
-- python -m properform Push 47.88.50.110:15554 asdf_ocrodjvu_c3a9d53782_2 ./profile_ocrodjvu_c3a9d53782_2
+- nosetests --verbose --with-cprofile --cprofile-stats-erase --cprofile-stats-file=profile_ocrodjvu_c3a9d53782_3
+- python -m properform Push 47.88.50.110:15554 asdf_ocrodjvu_c3a9d53782_3 ./profile_ocrodjvu_c3a9d53782_3
 - xmllint --noout --valid doc/*.xml
 
 # vim:ts=2 sts=2 sw=2 et
-#2017-07-29 14:20:04 modified at 0#2017-07-29 14:20:08 modified at 1#2017-07-29 14:20:13 modified at 2
+#2017-07-29 14:20:04 modified at 0#2017-07-29 14:20:08 modified at 1#2017-07-29 14:20:13 modified at 2#2017-07-29 14:20:17 modified at 3
