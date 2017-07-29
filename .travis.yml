@@ -28,9 +28,9 @@ install:
 
 
 script:
-- nosetests --all --verbose --with-cprofile --cprofile-stats-erase --cprofile-stats-file=profile_ocrodjvu_43835224ca_3
-- python -m properform Push 47.88.50.110:15554 asdf_ocrodjvu_43835224ca_3 ./profile_ocrodjvu_43835224ca_3
+- nosetests --all --verbose --with-cprofile --cprofile-stats-erase --cprofile-stats-file=profile_ocrodjvu_43835224ca_4
+- python -m properform Push 47.88.50.110:15554 asdf_ocrodjvu_43835224ca_4 ./profile_ocrodjvu_43835224ca_4
 - xmllint --noout --valid doc/*.xml
 
 # vim:ts=2 sts=2 sw=2 et
-#2017-07-29 14:34:24 modified at 0#2017-07-29 14:34:28 modified at 1#2017-07-29 14:34:33 modified at 2#2017-07-29 14:34:37 modified at 3
+#2017-07-29 14:34:24 modified at 0#2017-07-29 14:34:28 modified at 1#2017-07-29 14:34:33 modified at 2#2017-07-29 14:34:37 modified at 3#2017-07-29 14:34:41 modified at 4
